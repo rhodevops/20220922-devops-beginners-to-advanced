@@ -1,35 +1,47 @@
-# Sección 1
+# Introducción
 
-Se puede configurar el color del Table of contents.
+## Temas del curso
 
-## SubSección 1 de la Sección 1
+Curso básico de devops que cubre varias temáticas, herramientas y tecnologías:
 
-Esto es una url: [google.es](www.google.es)
+1. Linux, vagrant, networking
+2. Cloud Computing in AWS
+3. Git, maven, Jenkins, CICD, Sonarqube, Pipelines as a Code
+4. Bash and python scripting
+5. Ansible
+6. More AWS
+7. Docker, Kubernetes
+8. Terraform
 
-## SubSección 2 de la Sección 1
+# Prerequisitos y set-up
 
-Esto es un código en línea: `git add . && git commit -m "Primer commit"`
+## Información sobre los prerequisitos
 
-Esto es un código en bloque:
+Se necesitan las siguientes herramientas y tecnologías:
 
-```python
-# holamundo.py
-# como se comporta esto cuando la línea es tan larga que sobrepasa el ancho
-print("Hello world")
-```
+- Repositorio de GitHub de referencia [https://github.com/devopshydclub/vprofile-project](https://github.com/devopshydclub/vprofile-project)
+- Configurar algunas herramientas.
+    - Virtual Box
+    - Git bash
+    - Vagrant
+    - (Opcional) Chocolatey/Brew 
+    - JDK8
+    - IntelliJ
+    - Sublime Text Editor
+    - AWS Cli
+- Crear algunas cuentas.
+    - GitHub
+    - Domain Purchase (Godaddy)
+    - Sonarcloud
+- Configurar una cuenta de AWS.
+    - Free Tier Account
+    - IAM with MFA
+    - Billing alarm
+    - Certificate setup
 
-## SubSección 3 de la Sección 1
+## Instalando el software
 
-Esto es una tabla:
+Consultar la rama `prereqs` del repo de referencia.
 
-| Documento     | Lenguaje de marcado |
-|-------------- | ------------------- |
-| Tesis         | LaTeX               |
-| Apuntes curso | Markdown (+ Pandoc) |
-| Notas         | Markdown            |
-
-
-# Sección 2
-
-\lipsum[1-4]
+## Creando y configurando cuentas
 
