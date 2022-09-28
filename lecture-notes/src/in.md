@@ -122,5 +122,64 @@ Se añadirá un nuevo registro DNS (DNS Record) de tipo CNAME:
 - TTL default.
 - Resolver con el nombre más corto, sin repetir el nombre del dominio.
 
-Tras esperar 5-10 minutos, en raras ocasiones 1 hora, el estado del certificado de AWS cambia a `Issued`.
+Tras esperar 5-10 minutos (en raras ocasiones 1 hora) el estado del certificado de AWS cambia a `Issued`.
+
+# Configurar máquinas virtuales
+
+## ¿Qué es la virtualización?
+
+Un ordenador puede ejecutar varios SO de forma paralela. 
+
+Las formas de trabajar antes de la virtualización eran las siguientes:
+
+- Para ejecutar aplicaciones o servicios se necesitaban servidores.
+- La única opción eran ordenadores físicos (servidores en Data Centers).
+- La idea a seguir era [un servicio principal] - [un servidor] y así garantizar el aislamiento.
+- Los servidores siempre estaban sobreaprovisionados.
+- Los recursos de los servidores estaban infrautilizados.
+- Existían altos coste de capital y de operación.
+
+Por ejemplo, si en un proyectos IT tenías 10 servicios, entonces necesitabas como mínimo 10 servidores y 20 como mínimo para tener alta disponibilidad.
+
+En este contexto aparece el concepto y la práctica de la virtualización:
+
+- Aparece VMWare
+- VMWare permite a un ordenador ejecutar múltiples SO.
+- Se pueden particionar los recursos físicos en recursos virtuales.
+- Podemos pensar en pequeños ordenadores viviendo en un órdenador físico.
+- Las VM se ejecutan en entornos aislados.
+- Cada VM necesita su propio SO.
+- La virtualización de servidores es la virtualización más común.
+- Pero existen otros tipos de virtualización: redes virtuales, almacenamiento virtual, etc
+
+El esquema es el siguiente: se tiene la capa de hardware del `ordenador físico`, encima se encuntra una capa de software llamada `hypervisor `y sobre esta se encuentran las distintas `VM`, cada una con su propio `SO` donde se ejecutan sus propias `aplicaciones` consiguiendo un entorno aislado del resto de máquinas virtuales.
+
+Algo de terminología:
+
+- `Host OS` sistemas operativo de la máquina física.
+- `Guest OS` sistema operativo de la VM.
+- `Snapshot` es la imagen guardada de la VM que conserva su estado y sus datos en un momento dado.
+- `Hypervisor` capa de software que permite la creación y ejecución de las VM.
+
+Hypervisor de tipo 1:
+
+- También llamado `Bare Metal`.
+- Se ejecuta directamente en el ordenador físico del mismo modo que se ejecuta un SO en nuestro ordenador físico personal.
+- Solo se utiliza para producción.
+- Las VM se pueden agrupar formando un cluster de VM.
+- Algunos ejemplos son VMware esxi o Xen Hypervisor.
+- Hyper-V es un hypervisor de tipo 1.
+
+Hypervisor de tipo 2:
+
+- Se ejecuta como un software que puede ser instalado en el SO de tu ordenador.
+- Se utiliza con propósitos de aprendizaje y pruebas.
+- Algunos ejemplos son Virtual Box o VMware Server.
+
+## Configuración manual de VM
+
+Es muy recomendable y una muy buena práctica de aprendizaje entender como se hace una tarea o un trabajo de forma manual antes de automatizarla.
+
+
+ 
 
